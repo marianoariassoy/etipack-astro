@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
-import { dataContact } from "../data/Data";
+import { dataContact } from "../data/data";
 
 const Contact = () => {
   const lan = "es";
@@ -78,7 +78,7 @@ const Contact = () => {
                   <label className="mb-1 text-gray-500 block" htmlFor="message">
                     Comentarios
                   </label>
-                  <textarea cols="30" rows="4" className="w-full p-3 rounded-md border border-gray-200" placeholder={dataContact[lan].message} {...register("message")} />
+                  <textarea className="w-full p-3 rounded-md border border-gray-200" placeholder={dataContact[lan].message} {...register("message")} />
                 </div>
 
                 <div>

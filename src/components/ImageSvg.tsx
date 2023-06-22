@@ -1,19 +1,16 @@
-import React from "react";
 import Lottie from "lottie-react";
-import vino from "../data/vino.json";
-import multilabel from "../data/multilabel.json";
 
-type Props = {
-  file: string;
-  "client: load": boolean;
-};
-
-const ImageSvg = (file) => {
+const ImageSvg = () => {
   const style = {
     width: 150,
   };
 
-  const interactivity = {
+  type Interactivity = {
+    mode: "scroll";
+    actions: any[];
+  };
+
+  const interactivity: Interactivity = {
     mode: "scroll",
     actions: [
       {
@@ -34,7 +31,7 @@ const ImageSvg = (file) => {
     ],
   };
 
-  return file === "vino" ? <Lottie animationData={vino} style={style} interactivity={interactivity} /> : <Lottie animationData={multilabel} style={style} interactivity={interactivity} />;
+  return <Lottie animationData="../data/multilabel.json" style={style} interactivity={interactivity} />;
 };
 
 export default ImageSvg;
