@@ -1,81 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Clients from "../components/Clients.astro";
+import Image from "../components/Image.astro";
+import Contact from "../components/Contact";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Etipack Valoriza su marca">
+  <section class="mt-28 relative">
+    <div class="hero bg-top bg-cover" id="hero-nosotros">
+      <div class="hero-gradient-primary">
+        <div class="w-full max-w-5xl m-auto px-6 text-white pt-20 hero-container">
+          <div class="w-full lg:w-3/5">
+            <h1 class="text-5xl font-semibold">Dejá que tu empaque hable y eleve tu marca al siguiente nivel.</h1>
+            <p class="mb-4 text-2xl">Las etiquetas dicen mucho, comunicá la historia de tu marca, generá confianza y destacate sobre tus competidores.</p>
+            <a href="#contact" class="inline-block bg-white text-primary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold"> Contactanos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="w-full max-w-5xl m-auto px-6 py-12">
+      <div class="row lg:flex lg:mb-28">
+        <div class="lg:w-1/2">
+          <img src="./assets/images/img-1.jpg" alt="Imagen de una chica" class="absolute img-hero aspect-square rounded-full object-cover object-center p-4 bg-white" />
+        </div>
+        <div class="lg:w-1/2 pt-32 lg:pt-0">
+          <h1 class="text-5xl font-semibold text-primary mb-8">Comprometidos con tu marca y con el medio ambiente.</h1>
+        </div>
+      </div>
+
+      <Clients />
+
+      <div class="row" id="nosotros-txt">
+        <div class="lg:w-3/4 lg:py-20">
+          <h1 class="text-4xl font-semibold text-secondary mb-4">Somos Etipack. Desde 1983 ayudamos a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas.</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Image />
+
+  <section>
+    <div class="w-full max-w-5xl m-auto p-6 py-12">
+      <div class="text-xl flex gap-8 items-center">
+        <div>
+          <p>Todos queremos que nuestros productos comuniquen una imagen que capte la atención del consumidor. Para lograr esto trabajamos en conjunto con tus áreas de desarrollo, diseño y compras intentando minimizar el impacto ambiental.</p>
+          <a href="#contact" class="inline-block bg-primary text-white btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg mt-6"> Contactanos</a>
+        </div>
+
+        <img src="./assets/images/img-2.png" width="300" alt="Imagen de un vino y su etiqueta" class="" />
+      </div>
+    </div>
+  </section>
+
+  <Contact client:load />
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+<script>
+  const buttons = document.querySelectorAll(".btn-nav");
+  buttons[0].classList.add("active");
+</script>

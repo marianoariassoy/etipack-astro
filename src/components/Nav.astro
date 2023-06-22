@@ -1,0 +1,33 @@
+---
+import { navMenu } from "../data/data";
+---
+
+<ul class="nav-main">
+  {
+    navMenu.map((item) => (
+      <li>
+        <a href={item.url} class="btn-nav font-semibold">
+          {item.name}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<script>
+  const menuLinks = document.querySelectorAll(".scroll");
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", smoothScroll);
+  });
+
+  function smoothScroll(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    window.scrollTo({
+      top: targetElement.offsetTop - 100,
+      behavior: "smooth",
+    });
+  }
+</script>

@@ -1,0 +1,20 @@
+---
+---
+
+<div id="nav-menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<script>
+  const menu = document.querySelector("nav");
+  const navMenu = document.querySelector("#nav-menu");
+
+  navMenu.addEventListener("click", OpenMenu);
+
+  function OpenMenu() {
+    menu.classList.toggle("block");
+    navMenu.classList.toggle("active");
+  }
+</script>

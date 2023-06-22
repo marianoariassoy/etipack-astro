@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Contact from "../components/Contact";
+import Slider from "../components/Slider";
+import ImageSvg from "../components/ImageSvg";
+---
+
+<Layout title="Etiquetas autoadhesivas multipágina">
+  <section class="mt-28 relative">
+    <div class="hero bg-top bg-cover" id="hero-multipagina">
+      <div class="bg-black bg-opacity-0">
+        <div class="hero-container max-w-5xl m-auto px-6 text-white pt-20">
+          <div class="w-full lg:w-3/5">
+            <h1 class="text-5xl font-semibold">Etiquetas autoadhesivas multipágina</h1>
+            <p class="mb-4 text-2xl">Si tenés un espacio limitado y mucho que decir, encontraremos la respuesta más práctica y única para tu producto.</p>
+            <a href="#contact" class="inline-block bg-white text-primary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold"> Contactanos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="max-w-5xl m-auto px-6 py-12">
+      <div class="row lg:flex lg:mb-12">
+        <div class="lg:w-1/2">
+          <img src="./assets/images/img-3.png" alt="Imagen de una chica" class="absolute img-hero" />
+        </div>
+        <div class="lg:w-1/2 pt-32 lg:pt-0">
+          <h1 class="text-5xl font-semibold text-primary mb-8">Contá más. Multiplicá tu espacio.</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="max-w-5xl m-auto p-6 lg:flex justify-between items-center">
+      <div class="lg:w-4/6">
+        <h1 class="text-4xl font-semibold mb-6">Etiquetas autoadhesivas multipágina</h1>
+        <p class="text-xl mb-6">
+          Si tenés un espacio limitado y mucho que decir, este es el tipo etiquetas que necesitás. Se trata de una etiqueta con un folleto de una o más páginas adicionado sobre ella. Con ellas conseguimos añadir más información. Ideal para productos
+          que deben informar el cumplimiento de muchas normas y restricciones que no caben en una etiqueta normal.
+        </p>
+        <a href="#contact" class="inline-block bg-primary text-white btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold"> Conocé más</a>
+      </div>
+      <div class="hidden w-4/12 lg:flex justify-center">
+        <ImageSvg file="multilabel" client:load />
+      </div>
+    </div>
+  </section>
+  <Slider client:load />
+
+  <Contact client:load />
+</Layout>
+
+<script>
+  const buttons = document.querySelectorAll(".btn-nav");
+  buttons[2].classList.add("active");
+</script>

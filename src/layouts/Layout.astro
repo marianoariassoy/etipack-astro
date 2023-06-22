@@ -1,36 +1,54 @@
 ---
+import { manifest } from "astro:ssr-manifest";
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+
+import "../assets/css/main.min.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="./assets/images/img-1.png" />
+    <meta property="og:image:alt" content="Etipack" />
+    <link rel="canonical" href="" />
+    <meta name="description" content="Somos Etipack. Desde el año 1983 ayudando a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas." />
+    <meta name="title" content="Etipack" />
+    <meta property="og:title" content="Etipack" />
+    <meta property="og:description" content="Somos Etipack. Desde el año 1983 ayudando a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Etipack" />
+    <meta name="theme-color" content="#008293" />
+    <meta name="msapplication-TileColor" content="#008293" />
+    <meta name="msapplication-TileImage" content="./assets/images/logo.png" />
+    <meta name="application-name" content="Etipack" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Etipack" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header class="bg-white fixed top-0 z-40 w-screen">
+      <Header />
+    </header>
+
+    <main class="flex-grow basis-0">
+      <slot />
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
