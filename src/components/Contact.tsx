@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -26,7 +25,7 @@ const Contact = () => {
       subject: "Contacto",
     };
 
-    axios.post("https://imltenis.com.ar/riicabackend/send-email.php", { ...data, ...sender }).then((data) => {
+    axios.post(" ", { ...data, ...sender }).then((data) => {
       if (data.data === "success") {
         setSended(true);
         setSending(false);

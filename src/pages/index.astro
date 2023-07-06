@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Clients from "../components/Clients.jsx";
+// import Clients from "../components/Clients";
 import Image from "../components/Image.astro";
 import Contact from "../components/Contact";
+import Marquee from "../components/Marquee.astro";
 ---
 
 <Layout title="Etipack Valoriza su marca">
@@ -31,7 +32,8 @@ import Contact from "../components/Contact";
         </div>
       </div>
 
-      <Clients client:load />
+      <!-- <Clients client:load /> -->
+      <Marquee />
 
       <div class="row" id="nosotros-txt">
         <div class="lg:w-3/4 lg:py-20">
