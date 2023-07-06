@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Image from "../components/Image.astro";
 import Contact from "../components/Contact";
-import Slider from "../components/Slider";
+import SliderVinos from "../components/SliderVinos";
 ---
 
 <Layout title="Etiquetas autoadhesivas en bobina">
@@ -23,14 +23,17 @@ import Slider from "../components/Slider";
     <div class="w-full max-w-5xl m-auto px-6 pt-12 pb-24">
       <div class="row lg:flex lg:mb-28">
         <div class="lg:w-1/2">
-          <img src="./assets/images/img-2.jpg" alt="Imagen de una chica" class="absolute img-hero aspect-square rounded-full object-cover object-center p-4 bg-white" />
+          <img src="/assets/images/img-2.jpg" alt="Imagen de una chica" class="absolute img-hero aspect-square rounded-full object-cover object-center p-4 bg-white" />
         </div>
         <div class="lg:w-1/2 pt-32 lg:pt-0"></div>
       </div>
     </div>
   </section>
 
-  <Slider client:load />
+  <section id="vinos-y-bebidas">
+    <SliderVinos client:load />
+  </section>
+
   <Image />
   <Contact client:load />
 </Layout>

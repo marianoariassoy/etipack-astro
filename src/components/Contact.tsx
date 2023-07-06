@@ -59,25 +59,15 @@ const Contact = () => {
                 <h1 className="mb-6 text-3xl font-semibold">Nos encantaría saber de vos</h1>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="mb-1 text-gray-500 block" htmlFor="name">
-                      Nombre y Apellido
-                    </label>
                     <input className="w-full h-11 p-3 rounded-md border border-gray-200" placeholder={dataContact[lan].name} {...register("name", { required: true })} />
                     {errors.name && <Error />}
                   </div>
-
                   <div>
-                    <label className="mb-1 text-gray-500 block" htmlFor="email">
-                      Email
-                    </label>
                     <input className="w-full h-11 p-3 rounded-md border border-gray-200" placeholder={dataContact[lan].email} {...register("email", { required: true })} />
                     {errors.email && <Error />}
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label className="mb-1 text-gray-500 block" htmlFor="message">
-                    Comentarios
-                  </label>
                   <textarea className="w-full p-3 rounded-md border border-gray-200" placeholder={dataContact[lan].message} {...register("message")} />
                 </div>
 

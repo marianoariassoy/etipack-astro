@@ -15,27 +15,24 @@ export const navMenu = [
 
 export const dataFooter = [
   {
-    name: "Vinos",
-    url: "#",
+    name: "Vinos y bebidas",
+    url: "#vinos-y-bebidas",
   },
   {
     name: "Agroquímicos",
-    url: "#",
+    url: "#agroquimicos",
   },
   {
     name: "Alimentos",
-    url: "#",
+    url: "#alimentos",
   },
   {
-    name: "Cosméticos",
+    name: "Laboratorios de cosmética y medicinales",
+    url: "#laboratorios-de-cosmetica-y-medicinales",
   },
   {
-    name: "Productos medicinales",
-    url: "#",
-  },
-  {
-    name: "Baterías",
-    url: "#",
+    name: "Industria y automotor",
+    url: "#industria-y-automotor",
   },
 ];
 

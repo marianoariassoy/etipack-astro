@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact";
-import Slider from "../components/Slider";
-// import ImageSvg from "../components/ImageSvg";
+import SliderMultipagina from "../components/SliderMulipagina";
 ---
 
 <Layout title="Etiquetas autoadhesivas multipágina">
@@ -11,8 +10,8 @@ import Slider from "../components/Slider";
       <div class="bg-black bg-opacity-0">
         <div class="hero-container max-w-5xl m-auto px-6 text-white pt-20">
           <div class="w-full lg:w-3/5">
-            <h1 class="text-5xl font-semibold">Etiquetas autoadhesivas multipágina</h1>
-            <p class="mb-4 text-2xl">Si tenés un espacio limitado y mucho que decir, encontraremos la respuesta más práctica y única para tu producto.</p>
+            <h1 class="text-5xl font-semibold">¿Tenés mucha información que comunicar?</h1>
+            <p class="mb-4 text-2xl">Este es el tipo de solución que necesitás. Son etiquetas con folletos adosados del tamaño que sea necesario.</p>
             <a href="#contact" class="inline-block bg-white text-primary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold"> Contactanos</a>
           </div>
         </div>
@@ -46,7 +45,7 @@ import Slider from "../components/Slider";
       </div>
     </div>
   </section>
-  <Slider client:load />
+  <SliderMultipagina client:load />
 
   <Contact client:load />
 </Layout>

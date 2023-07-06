@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Clients from "../components/Clients.astro";
+import Clients from "../components/Clients.jsx";
 import Image from "../components/Image.astro";
 import Contact from "../components/Contact";
 ---
 
 <Layout title="Etipack Valoriza su marca">
   <section class="mt-28 relative">
-    <div class="hero bg-top bg-cover" id="hero-nosotros">
+    <div class="hero bg-cover bg-center" id="hero-nosotros">
       <div class="hero-gradient-primary">
         <div class="w-full max-w-5xl m-auto px-6 text-white pt-20 hero-container">
           <div class="w-full lg:w-3/5">
@@ -31,7 +31,7 @@ import Contact from "../components/Contact";
         </div>
       </div>
 
-      <Clients />
+      <Clients client:load />
 
       <div class="row" id="nosotros-txt">
         <div class="lg:w-3/4 lg:py-20">

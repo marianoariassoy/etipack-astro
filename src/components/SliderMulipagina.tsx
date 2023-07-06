@@ -51,23 +51,17 @@ const Slider = () => {
     <section>
       <div className="w-full max-w-5xl m-auto px-6 py-10">
         <Slide slidesToScroll={2} slidesToShow={2} indicators={false} responsive={responsiveSettings} {...properties}>
-          <div className="p-2">
-            <img src="./assets/images/slider/image1.jpg" className="aspect-square object-cover w-full" />
+          <div className="px-4">
+            <img src="./assets/images/multipagina/2.jpg" className="aspect-square object-cover w-full " />
           </div>
-          <div className="p-2">
-            <img src="./assets/images/slider/image2.jpg" className="aspect-square object-cover w-full" />
+          <div className="px-4">
+            <img src="./assets/images/multipagina/3.jpg" className="aspect-square object-cover w-full " />
           </div>
-          <div className="p-2">
-            <img src="./assets/images/slider/image3.jpg" className="aspect-square object-cover w-full" />
+          <div className="px-4">
+            <img src="./assets/images/multipagina/4.jpg" className="aspect-square object-cover w-full " />
           </div>
-          <div className="p-2">
-            <img src="./assets/images/slider/image2.jpg" className="aspect-square object-cover w-full" />
-          </div>
-          <div className="p-2">
-            <img src="./assets/images/slider/image1.jpg" className="aspect-square object-cover w-full" />
-          </div>
-          <div className="p-2">
-            <img src="./assets/images/slider/image1.jpg" className="aspect-square object-cover w-full" />
+          <div className="px-4">
+            <img src="./assets/images/multipagina/multipagina2.jpg" className="aspect-square object-cover w-full " />
           </div>
         </Slide>
       </div>
