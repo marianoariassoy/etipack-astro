@@ -6,13 +6,13 @@ const Modal = ({ currentImage, setCurrentImage }) => {
   }
   return (
     <div
-      className='fade-in fixed bg-black/80 h-screen w-screen top-0 left-0 grid place-items-center dismiss z-50'
+      className='fade-in fixed bg-black/80 h-screen w-screen top-0 left-0 grid place-items-center dismiss z-50 p-6'
       onClick={handelClick}
     >
       <img
         src={currentImage}
         alt='Bigger picture'
-        className='h-4/5'
+        className='lg:h-4/5'
       />
       <span
         className='absolute top-8 right-8 text-white font-bold text-3xl cursor-pointer hover:text-black dismiss'
