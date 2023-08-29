@@ -1,12 +1,15 @@
 ---
-import { navMenu } from "../data/data";
+import { navMenu } from '../data/data'
 ---
 
-<ul class="nav-main">
+<ul class='nav-main'>
   {
-    navMenu.map((item) => (
+    navMenu.map(item => (
       <li>
-        <a href={item.url} class="btn-nav font-semibold">
+        <a
+          href={item.url}
+          class='btn-nav font-semibold'
+        >
           {item.name}
         </a>
       </li>
@@ -15,19 +18,19 @@ import { navMenu } from "../data/data";
 </ul>
 
 <script>
-  const menuLinks = document.querySelectorAll(".scroll");
+  const menuLinks = document.querySelectorAll('.scroll')
 
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", smoothScroll);
-  });
+  menuLinks.forEach(link => {
+    link.addEventListener('click', smoothScroll)
+  })
 
   function smoothScroll(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+    e.preventDefault()
+    const targetId = this.getAttribute('href')
+    const targetElement = document.querySelector(targetId)
     window.scrollTo({
       top: targetElement.offsetTop - 100,
-      behavior: "smooth",
-    });
+      behavior: 'smooth'
+    })
   }
 </script>

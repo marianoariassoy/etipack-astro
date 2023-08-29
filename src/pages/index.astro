@@ -1,20 +1,31 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
 // import Clients from "../components/Clients";
-import Image from "../components/Image.astro";
-import Contact from "../components/Contact";
-import Marquee from "../components/Marquee.astro";
+import Image from '../components/Image.astro'
+import Contact from '../components/Contact'
+import Marquee from '../components/Marquee.astro'
 ---
 
-<Layout title="Etipack Valoriza su marca">
-  <section class="mt-28 relative">
-    <div class="hero bg-cover bg-center" id="hero-nosotros">
-      <div class="hero-gradient-primary">
-        <div class="w-full max-w-5xl m-auto px-6 text-white pt-20 hero-container">
-          <div class="w-full lg:w-3/5">
-            <h1 class="text-5xl font-semibold">Dejá que tu empaque hable y eleve tu marca al siguiente nivel.</h1>
-            <p class="mb-4 text-2xl">Las etiquetas dicen mucho, comunicá la historia de tu marca, generá confianza y destacate sobre tus competidores.</p>
-            <a href="#contact" class="inline-block bg-white text-primary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold"> Contactanos</a>
+<Layout title='Etipack Valoriza su marca'>
+  <section class='mt-28 relative'>
+    <div
+      class='hero bg-cover bg-center'
+      id='hero-nosotros'
+    >
+      <div class='hero-gradient-primary'>
+        <div class='w-full max-w-5xl m-auto px-6 text-white pt-20 hero-container'>
+          <div class='w-full lg:w-3/4'>
+            <h1 class='text-5xl font-semibold'>Dejá que tu etiqueta hable y eleve tu marca al siguiente nivel.</h1>
+            <p class='mb-4 text-2xl'>
+              Las etiquetas dicen mucho. Comunicá la historia de tu marca, generá confianza y destacate sobre tus
+              competidores.
+            </p>
+            <a
+              href='#contact'
+              class='inline-block bg-white text-primary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold'
+            >
+              Contactanos</a
+            >
           </div>
         </div>
       </div>
@@ -22,22 +33,32 @@ import Marquee from "../components/Marquee.astro";
   </section>
 
   <section>
-    <div class="w-full max-w-5xl m-auto px-6 py-12">
-      <div class="row lg:flex lg:mb-28">
-        <div class="lg:w-1/2">
-          <img src="./assets/images/img-1.jpg" alt="Imagen de una chica" class="absolute img-hero aspect-square rounded-full object-cover object-center p-4 bg-white" />
+    <div class='w-full max-w-5xl m-auto px-6 py-12'>
+      <div class='row lg:flex lg:mb-28'>
+        <div class='lg:w-1/2'>
+          <img
+            src='./assets/images/img-1.jpg'
+            alt='Imagen de una chica'
+            class='absolute img-hero aspect-square rounded-full object-cover object-center p-4 bg-white'
+          />
         </div>
-        <div class="lg:w-1/2 pt-32 lg:pt-0">
-          <h1 class="text-5xl font-semibold text-primary mb-8">Comprometidos con tu marca y con el medio ambiente.</h1>
+        <div class='lg:w-1/2 pt-32 lg:pt-0'>
+          <h1 class='text-5xl font-semibold text-primary mb-8'>Comprometidos con tu marca y con el medio ambiente.</h1>
         </div>
       </div>
 
       <!-- <Clients client:load /> -->
       <Marquee />
 
-      <div class="row" id="nosotros-txt">
-        <div class="lg:w-3/4 lg:py-20">
-          <h1 class="text-4xl font-semibold text-secondary mb-4">Somos Etipack. Desde 1983 ayudamos a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas.</h1>
+      <div
+        class='row'
+        id='nosotros-txt'
+      >
+        <div class='lg:w-3/4 lg:py-20'>
+          <h1 class='text-4xl font-semibold text-secondary mb-4'>
+            Somos Etipack. Desde 1983 ayudamos a nuestros clientes a comunicarse de forma más efectiva a través de las
+            artes gráficas.
+          </h1>
         </div>
       </div>
     </div>
@@ -46,14 +67,22 @@ import Marquee from "../components/Marquee.astro";
   <Image />
 
   <section>
-    <div class="w-full max-w-5xl m-auto p-6 py-12">
-      <div class="text-xl flex gap-8 items-center">
+    <div class='w-full max-w-5xl m-auto p-6 py-12'>
+      <div class='text-xl flex gap-8 items-center'>
         <div>
-          <p>Todos queremos que nuestros productos comuniquen una imagen que capte la atención del consumidor. Para lograr esto trabajamos en conjunto con tus áreas de desarrollo, diseño y compras intentando minimizar el impacto ambiental.</p>
-          <a href="#contact" class="inline-block bg-primary text-white btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg mt-6"> Contactanos</a>
+          <p>
+            Todos queremos que nuestros productos comuniquen una imagen que capte la atención del consumidor. Para
+            lograr esto trabajamos en conjunto con tus áreas de desarrollo, diseño y compras intentando minimizar el
+            impacto ambiental.
+          </p>
         </div>
 
-        <img src="./assets/images/img-2.png" width="300" alt="Imagen de un vino y su etiqueta" class="hidden md:block" />
+        <img
+          src='./assets/images/img-2.png'
+          width='300'
+          alt='Imagen de un vino y su etiqueta'
+          class='hidden md:block'
+        />
       </div>
     </div>
   </section>
@@ -62,6 +91,6 @@ import Marquee from "../components/Marquee.astro";
 </Layout>
 
 <script>
-  const buttons = document.querySelectorAll(".btn-nav");
-  buttons[0].classList.add("active");
+  const buttons = document.querySelectorAll('.btn-nav')
+  buttons[0].classList.add('active-nav')
 </script>

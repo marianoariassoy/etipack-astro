@@ -1,18 +1,26 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Image from "../components/Image.astro";
-import Contact from "../components/Contact";
-import SliderVinos from "../components/SliderVinos";
+import Layout from '../layouts/Layout.astro'
+import Image from '../components/Image.astro'
+import Contact from '../components/Contact'
+import Slider from '../components/Slider'
 ---
 
-<Layout title="Etiquetas autoadhesivas en bobina">
-  <section class="mt-28 relative">
-    <div class="hero bg-top bg-cover" id="hero-autoadhesivas">
-      <div class="hero-gradient-secondary">
-        <div class="hero-container w-full max-w-5xl m-auto px-6 text-white pt-20">
-          <div class="w-full lg:w-3/5">
-            <h1 class="text-5xl font-semibold mb-8">Etiquetas autoadhesivas</h1>
-            <a href="#contact" class="inline-block bg-white text-secondary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold"> Contactanos</a>
+<Layout title='Etiquetas autoadhesivas en bobina'>
+  <section class='mt-28 relative'>
+    <div
+      class='hero bg-top bg-cover'
+      id='hero-autoadhesivas'
+    >
+      <div class='hero-gradient-secondary'>
+        <div class='hero-container w-full max-w-5xl m-auto px-6 text-white pt-20'>
+          <div class='w-full lg:w-3/5'>
+            <h1 class='text-5xl font-semibold mb-8'>Etiquetas autoadhesivas</h1>
+            <a
+              href='#contact'
+              class='inline-block bg-white text-secondary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold'
+            >
+              Contactanos</a
+            >
           </div>
         </div>
       </div>
@@ -20,25 +28,52 @@ import SliderVinos from "../components/SliderVinos";
   </section>
 
   <section>
-    <div class="w-full max-w-5xl m-auto px-6 pt-12 pb-24">
-      <div class="row lg:flex lg:mb-28">
-        <div class="lg:w-1/2">
-          <img src="/assets/images/img-2.jpg" alt="Imagen de una chica" class="absolute img-hero aspect-square rounded-full object-cover object-center p-4 bg-white" />
+    <div class='w-full max-w-5xl m-auto px-6 pt-12 lg:pb-24'>
+      <div class='row lg:flex lg:mb-28'>
+        <div class='lg:w-1/2'>
+          <img
+            src='/assets/images/img-2.jpg'
+            alt='Imagen de una chica'
+            class='absolute img-hero aspect-square rounded-full object-cover object-center p-4 bg-white'
+          />
         </div>
-        <div class="lg:w-1/2 pt-32 lg:pt-0"></div>
+        <div class='lg:w-1/2 pt-32 lg:pt-0'></div>
       </div>
     </div>
   </section>
 
-  <section id="vinos-y-bebidas">
-    <SliderVinos client:load />
-  </section>
+  <Slider
+    client:load
+    category={1}
+    title='Vinos y bebidas'
+  />
+  <Slider
+    client:load
+    category={3}
+    title='Agroquímicos'
+  />
 
   <Image />
+  <Slider
+    client:load
+    category={5}
+    title='Alimentos'
+  />
+  <Slider
+    client:load
+    category={4}
+    title='Laboratorios de cosmética y medicinales'
+  />
+  <Slider
+    client:load
+    category={6}
+    title='Industria y automotor '
+  />
+
   <Contact client:load />
 </Layout>
 
 <script>
-  const buttons = document.querySelectorAll(".btn-nav");
-  buttons[1].classList.add("active");
+  const buttons = document.querySelectorAll('.btn-nav')
+  buttons[1].classList.add('active-nav')
 </script>
