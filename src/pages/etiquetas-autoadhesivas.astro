@@ -42,33 +42,47 @@ import Slider from '../components/Slider'
     </div>
   </section>
 
-  <Slider
-    client:load
-    category={1}
-    title='Vinos y bebidas'
-  />
-  <Slider
-    client:load
-    category={3}
-    title='Agroquímicos'
-  />
+  <section id='vinos-y-bebidas'>
+    <Slider
+      client:load
+      category={1}
+      title='Vinos y bebidas'
+    />
+  </section>
+
+  <section id='agroquimicos'>
+    <Slider
+      client:load
+      category={3}
+      title='Agroquímicos'
+    />
+  </section>
 
   <Image />
-  <Slider
-    client:load
-    category={5}
-    title='Alimentos'
-  />
-  <Slider
-    client:load
-    category={4}
-    title='Laboratorios de cosmética y medicinales'
-  />
-  <Slider
-    client:load
-    category={6}
-    title='Industria y automotor '
-  />
+
+  <section id='alimentos'>
+    <Slider
+      client:load
+      category={5}
+      title='Alimentos'
+    />
+  </section>
+
+  <section id='laboratorios-de-cosmetica-y-medicinales'>
+    <Slider
+      client:load
+      category={4}
+      title='Laboratorios de cosmética y medicinales'
+    />
+  </section>
+
+  <section id='industria-y-automotor'>
+    <Slider
+      client:load
+      category={6}
+      title='Industria y automotor'
+    />
+  </section>
 
   <Contact client:load />
 </Layout>

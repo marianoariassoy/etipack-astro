@@ -16,7 +16,7 @@ const Slider = ({ category, title }: { category: Number; title: String }) => {
       breakpoint: 800,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 2
+        slidesToScroll: 4
       }
     },
     {
@@ -31,13 +31,13 @@ const Slider = ({ category, title }: { category: Number; title: String }) => {
     width: '30px',
     background: 'none',
     border: '0px',
-    marginRight: '-20px'
+    marginRight: '-25px'
   }
   const buttonStyle2 = {
     width: '30px',
     background: 'none',
     border: '0px',
-    marginLeft: '-20px'
+    marginLeft: '-25px'
   }
   const properties = {
     prevArrow: (
@@ -45,7 +45,7 @@ const Slider = ({ category, title }: { category: Number; title: String }) => {
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 320 512'
-          fill='#000'
+          fill='#CCC'
           height='40'
         >
           <path d='M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z' />
@@ -57,7 +57,7 @@ const Slider = ({ category, title }: { category: Number; title: String }) => {
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 320 512'
-          fill='#000'
+          fill='#CCC'
           height='40'
         >
           <path d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z' />
@@ -83,13 +83,13 @@ const Slider = ({ category, title }: { category: Number; title: String }) => {
             .filter(item => item.category === category)
             .map((item, index) => (
               <div
-                className='p-2 cursor-pointer hover:opacity-70 transition-all'
+                className='p-2 cursor-pointer hover:opacity-70 transition-all '
                 key={index}
                 onClick={() => handelCLick('./images/' + item.file)}
               >
                 <img
-                  src={`./images/${item.file}`}
-                  className='aspect-square object-cover w-full rounded-xl'
+                  src={`/images/${item.file}`}
+                  className='aspect-square object-cover w-full rounded-xl border'
                 />
               </div>
             ))}
