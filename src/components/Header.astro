@@ -1,19 +1,29 @@
 ---
-import Nav from "./Nav.astro";
-import NavMenu from "./NavMenu.astro";
+import Nav from './Nav.astro'
+import NavMenu from './NavMenu.astro'
 ---
 
-<div class="w-full max-w-5xl m-auto flex justify-between items-center p-6">
+<div class='w-full max-w-5xl m-auto flex justify-between items-center p-6'>
   <div>
-    <a href="/" class="logo">
-      <img src="/assets/images/logo.png" alt="Etipack Logo" />
+    <a
+      href='/'
+      class='logo'
+    >
+      <img
+        src='/assets/logo.svg'
+        alt='Etipack Logo'
+      />
     </a>
   </div>
   <nav>
     <Nav />
   </nav>
   <div>
-    <a href="#contact" class="btn-nav-contact bg-primary text-white px-8 py-2 rounded-lg hidden lg:inline scroll">Contactanos</a>
+    <a
+      href='#contact'
+      class='btn-nav-contact bg-primary text-white px-8 py-2 rounded-lg hidden lg:inline scroll'
+      >Contactanos</a
+    >
   </div>
 
   <NavMenu />
