@@ -1,55 +1,112 @@
 ---
-import { manifest } from "astro:ssr-manifest";
 export interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 
-import "../styles/main.min.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import '../styles/main.min.css'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content='Astro description'
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <link
+      rel='shortcut icon'
+      href='favicon.jpg'
+      type='image/x-icon'
+    />
+    <meta
+      name='generator'
+      content={Astro.generator}
+    />
     <title>{title}</title>
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="./assets/images/img-1.png" />
-    <meta property="og:image:alt" content="Etipack" />
-    <link rel="canonical" href="" />
     <meta
-      name="description"
-      content="Somos Etipack. Desde el año 1983 ayudando a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas."
+      property='og:url'
+      content='http://etipack.com.ar/'
     />
-    <meta name="title" content="Etipack" />
-    <meta property="og:title" content="Etipack" />
     <meta
-      property="og:description"
-      content="Somos Etipack. Desde el año 1983 ayudando a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas."
+      property='og:image'
+      content='/assets/images/img-1.png'
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Etipack" />
-    <meta name="theme-color" content="#008293" />
-    <meta name="msapplication-TileColor" content="#008293" />
-    <meta name="msapplication-TileImage" content="./assets/images/logo.png" />
-    <meta name="application-name" content="Etipack" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="author" content="Etipack" />
+    <meta
+      property='og:image:alt'
+      content='Etipack'
+    />
+    <link
+      rel='canonical'
+      href='http://etipack.com.ar/'
+    />
+    <meta
+      name='description'
+      content='Somos Etipack. Desde el año 1983 ayudando a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas.'
+    />
+    <meta
+      name='title'
+      content='Etipack'
+    />
+    <meta
+      property='og:title'
+      content='Etipack'
+    />
+    <meta
+      property='og:description'
+      content='Somos Etipack. Desde el año 1983 ayudando a nuestros clientes a comunicarse de forma más efectiva a través de las artes gráficas.'
+    />
+    <meta
+      property='og:type'
+      content='website'
+    />
+    <meta
+      property='og:site_name'
+      content='Etipack'
+    />
+    <meta
+      name='theme-color'
+      content='#008293'
+    />
+    <meta
+      name='msapplication-TileColor'
+      content='#008293'
+    />
+    <meta
+      name='msapplication-TileImage'
+      content='/assets/images/logo.png'
+    />
+    <meta
+      name='application-name'
+      content='Etipack'
+    />
+    <meta
+      name='robots'
+      content='index, follow'
+    />
+    <meta
+      name='googlebot'
+      content='index, follow'
+    />
+    <meta
+      name='author'
+      content='Etipack'
+    />
   </head>
-  <body class="flex flex-col min-h-screen">
-    <header class="bg-white fixed top-0 z-40 w-screen">
+  <body class='flex flex-col min-h-screen'>
+    <header class='bg-white fixed top-0 z-40 w-screen'>
       <Header />
     </header>
 
-    <main class="flex-grow basis-0">
+    <main class='flex-grow basis-0'>
       <slot />
     </main>
 

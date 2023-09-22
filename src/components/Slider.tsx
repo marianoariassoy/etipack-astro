@@ -85,7 +85,7 @@ const Slider = ({ category, title }: { category: Number; title: String }) => {
               <div
                 className='p-2 cursor-pointer hover:opacity-70 transition-all '
                 key={index}
-                onClick={() => handelCLick('./images/' + item.file)}
+                onClick={() => handelCLick('https://etipack.com.ar/images/' + item.file)}
               >
                 <img
                   src={`/images/${item.file}`}
